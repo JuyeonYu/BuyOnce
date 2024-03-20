@@ -27,18 +27,23 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
             builder: (_) =>
-                isFirstOpen ? const OnboardingScreen() : const RootScreen()),
+                true ? const OnboardingScreen() : const RootScreen()),
         (route) => false);
   }
 
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-        child: Column(
-      children: [
-        Image.asset('asset/img/logo.png'),
-        const CircularProgressIndicator()
-      ],
-    ));
+        backgroundColor: Colors.black,
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Image.asset('asset/img/logo.png'),
+              const CircularProgressIndicator()
+            ],
+          ),
+        ));
   }
 }
