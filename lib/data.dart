@@ -1,0 +1,1 @@
+const IS_FIRST_OPEN = 'IS_FIRST_OPEN_KEY';
