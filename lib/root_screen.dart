@@ -7,8 +7,17 @@ class RootScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width,
         child: const Column(
-      children: [Text('root')],
-    ));
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [Text('root')],
+        ),
+      ),
+    );
   }
 }
